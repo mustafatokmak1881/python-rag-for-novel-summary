@@ -20,8 +20,8 @@ db_dir = os.path.join(script_dir, "chroma_db")
 
 # 2. Local Models (Gemma 2B for speed)
 #Settings.llm = OpenAI(model="gpt-4o-mini", temperature=0.1, request_timeout=600.0)
-Settings.llm = Ollama(model="gemma:2b", request_timeout=600.0)
-Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+Settings.llm = Ollama(model="gemma:7b", request_timeout=600.0)
+Settings.embed_model = HuggingFaceEmbedding(model_name="qwen3-embedding")
 
 # 3. ChromaDB Connection & Dimension Check
 db = chromadb.PersistentClient(path=db_dir)
