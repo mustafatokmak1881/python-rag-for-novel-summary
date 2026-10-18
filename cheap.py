@@ -17,6 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(script_dir, "data")
 db_dir = os.path.join(script_dir, "chroma_db")
 
+
 os.environ["OPENAI_API_KEY"] = ""
 
 # 2. Local Models (Gemma 2B for speed)
