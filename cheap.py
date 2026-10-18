@@ -18,7 +18,7 @@ data_dir = os.path.join(script_dir, "data")
 db_dir = os.path.join(script_dir, "chroma_db")
 
 # add here your api key
-os.environ["OPENAI_API_KEY"] = "sk..."
+
 
 # 2. Local Models (Gemma 2B for speed)
 #Settings.llm = OpenAI(model="gpt-4o-mini", temperature=0.1, request_timeout=600.0)
