@@ -17,7 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(script_dir, "data")
 db_dir = os.path.join(script_dir, "chroma_db")
 
-os.environ["OPENAI_API_KEY"] = "sk-..."
+os.environ["OPENAI_API_KEY"] = "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"
 
 # 2. Local Models (Gemma 2B for speed)
 #Settings.llm = OpenAI(model="gpt-4o-mini", temperature=0.1, request_timeout=600.0)
@@ -65,7 +65,7 @@ query_engine = index.as_query_engine(
 )
 
 # 6. Query
-query = "Eserlerdeki en acımasız karakteri odağına alarak derinlemesine bir karakter analizi yap. Karakterin hikaye boyunca zihnini kurcalayan, onu dönüştüren ana olayı ve bu olayın onda yarattığı baskın duygusal yükü psikolojik boyutuyla ele al. Karakterin yaşadığı bu yoğun duygunun eylemlerine ve diğer karakterlerle olan ilişkilerine nasıl yansıdığını en az 1 adeet uzun ve edebi paragraf halinde ifade et."
+query = "Eserlerdeki en acımasız karakteri odağına alarak kim olduğunu ve hangi eserde yer aldığını özetler aracılığıyla bul ve bana söyle. Eğer karakteri bulamazsanız sadece karakterin hangi eserde yer aldığını söyle. Derinlemesine bir karakter analizi yap. Karakterin hikaye boyunca zihnini kurcalayan, onu dönüştüren ana olayı ve bu olayın onda yarattığı baskın duygusal yükü psikolojik boyutuyla ele al. Karakterin yaşadığı bu yoğun duygunun eylemlerine ve diğer karakterlerle olan ilişkilerine nasıl yansıdığını en az 1 adet uzun ve edebi paragraf halinde Tamamen Türkçe olarak ifade et. Unutma her şey Türkçe olmalı bana Türkçe cevap vermelisin !"
 print(f"\nQuery: {query}")
 
 response = query_engine.query(query)
