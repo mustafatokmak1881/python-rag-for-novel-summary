@@ -10,14 +10,13 @@ from llama_index.core import (
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
 from llama_index.vector_stores.chroma import ChromaVectorStore
-from llama_index.llms.openai import OpenAI
+
 
 # 1. Paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(script_dir, "data")
 db_dir = os.path.join(script_dir, "chroma_db")
 
-os.environ["OPENAI_API_KEY"] = "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"
 
 # 2. Local Models (Gemma 2B for speed)
 #Settings.llm = OpenAI(model="gpt-4o-mini", temperature=0.1, request_timeout=600.0)
